@@ -84,7 +84,7 @@ app.post("/profileInfo", (req, res) => {
     const ifsc = req.body.ifsc;
     const pan = req.body.pan;
     const currentBalance = req.body.currentBalance;
-    console.log(username);
+    console.log(firstname);
     db.query(
         "UPDATE users SET firstname = ? ,lastname = ?, mobileno= ?, address=?, city = ?, country = ?, postalcode = ?, bankno = ?, ifsc = ?, pan = ?, currentbal = ? WHERE username = ?",
         [

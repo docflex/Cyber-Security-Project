@@ -81,12 +81,6 @@
 
     module.seed(0);
 
-    /*
-    for(var i=0; i<256; i++) {
-      perm[i] = perm[i + 256] = p[i];
-      gradP[i] = gradP[i + 256] = grad3[perm[i] % 12];
-    }*/
-
     // Skewing and unskewing factors for 2, 3, and 4 dimensions
     var F2 = 0.5 * (Math.sqrt(3) - 1);
     var G2 = (3 - Math.sqrt(3)) / 6;

@@ -918,8 +918,12 @@ const getNoise = (intensity) => {
 
 const encrypt = (password) => {
     const iv = getNoise(maxDependencies);
-    iv = Buffer.from(randomBytes(16));
-    const cipher = createCipheriv("aes-256-ctr", Buffer.from(secret), iv);
+    iv = Buffer.from(crypto.randomBytes(16));
+    const cipher = crypto.createCipheriv(
+        "aes-256-ctr",
+        Buffer.from(secret),
+        iv
+    );
 
     const encryptedPassword = Buffer.concat([
         cipher.update(password),
@@ -933,7 +937,7 @@ const encrypt = (password) => {
 };
 
 const decrypt = (encryption) => {
-    const decipher = createDecipheriv(
+    const decipher = crypto.createDecipheriv(
         "aes-256-ctr",
         Buffer.from(secret),
         Buffer.from(encryption.TransactionPasswordIv, "hex")
@@ -948,7 +952,7 @@ const decrypt = (encryption) => {
 };
 
 const decryptpass = (encryption) => {
-    const decipher = createDecipheriv(
+    const decipher = crypto.createDecipheriv(
         "aes-256-ctr",
         Buffer.from(secret),
         Buffer.from(encryption.Encryptediv, "hex")
