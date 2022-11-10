@@ -30,12 +30,11 @@
 
 ## Instructions
 
-1. `https://github.com/Midas847/AES_BANK_SYSTEM.git`
-2. `cd ./websecbank`
-3. Install node dependencies
+1. `https://github.com/docflex/Cyber-Security-Project.git`
+2. Install node dependencies
     - `npm install`
-4. Create a `.env` file
+3. Create a `.env` file
     - Add relevant credentials
-5. cd './server' and npm run devStart to run the server.
-6. cd './client' and npm start to run the app.
-7. The app is now running at http://localhost:3000.
+4. cd './server' and npm run devStart to run the server.
+5. cd './client' and npm start to run the app.
+6. The app is now running at http://localhost:3000.
