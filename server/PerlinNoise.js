@@ -336,7 +336,7 @@
         var n111 = gradP[X + 1 + perm[Y + 1 + perm[Z + 1]]].dot3(
             x - 1,
             y - 1,
-            z - 1
+            z - 1,
         );
 
         // Compute the fade curve value for x, y, z
@@ -348,7 +348,7 @@
         return lerp(
             lerp(lerp(n000, n100, u), lerp(n001, n101, u), w),
             lerp(lerp(n010, n110, u), lerp(n011, n111, u), w),
-            v
+            v,
         );
     };
 })(this);

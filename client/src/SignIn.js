@@ -35,7 +35,7 @@ function SignIn() {
                     localStorage.setItem("username", response.data[0].name);
                     localStorage.setItem(
                         "firstname",
-                        response.data[0].firstname
+                        response.data[0].firstname,
                     );
                     localStorage.setItem("password", "");
                     navigate("/");

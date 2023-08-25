@@ -922,7 +922,7 @@ const encrypt = (password) => {
     const cipher = crypto.createCipheriv(
         "aes-256-ctr",
         Buffer.from(secret),
-        iv
+        iv,
     );
 
     const encryptedPassword = Buffer.concat([
@@ -940,7 +940,7 @@ const decrypt = (encryption) => {
     const decipher = crypto.createDecipheriv(
         "aes-256-ctr",
         Buffer.from(secret),
-        Buffer.from(encryption.TransactionPasswordIv, "hex")
+        Buffer.from(encryption.TransactionPasswordIv, "hex"),
     );
 
     const decryptedPassword = Buffer.concat([
@@ -955,7 +955,7 @@ const decryptpass = (encryption) => {
     const decipher = crypto.createDecipheriv(
         "aes-256-ctr",
         Buffer.from(secret),
-        Buffer.from(encryption.Encryptediv, "hex")
+        Buffer.from(encryption.Encryptediv, "hex"),
     );
 
     const decryptedPassword = Buffer.concat([

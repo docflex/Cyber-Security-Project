@@ -47,7 +47,7 @@ app.post("/registration", (req, res) => {
         ],
         (err, result) => {
             console.log(err);
-        }
+        },
     );
 });
 
@@ -67,7 +67,7 @@ app.post("/login", (req, res) => {
             } else {
                 res.send({ message: "Wrong username/password combination" });
             }
-        }
+        },
     );
 });
 
@@ -103,7 +103,7 @@ app.post("/profileInfo", (req, res) => {
         ],
         (err, result) => {
             console.log(err);
-        }
+        },
     );
     db.query(
         "SELECT * FROM users WHERE username = ?",
@@ -113,7 +113,7 @@ app.post("/profileInfo", (req, res) => {
                 res.send({ err: err });
             }
             res.send(result);
-        }
+        },
     );
 });
 
@@ -140,7 +140,7 @@ app.post("/updatedBal", (req, res) => {
         [updatedBal, username],
         (err, result) => {
             console.log(err);
-        }
+        },
     );
 });
 
@@ -154,7 +154,7 @@ app.post("/encryptPassword", (req, res) => {
                 console.log(err);
             }
             res.send(decrypt(result[0]));
-        }
+        },
     );
 });
 
@@ -166,7 +166,7 @@ app.post("/getpassword", (req, res) => {
         (err, result) => {
             if (err) console.log(err);
             res.send(result);
-        }
+        },
     );
 });
 
@@ -179,7 +179,7 @@ app.post("/withdrawnBal", (req, res) => {
         [updatedBal, username],
         (err, result) => {
             console.log(err);
-        }
+        },
     );
 });
 
@@ -192,7 +192,7 @@ app.post("/sendBal", (req, res) => {
         [amount, username],
         (err, result) => {
             console.log(err);
-        }
+        },
     );
 });
 
@@ -208,7 +208,7 @@ app.post("/sendMessages", (req, res) => {
         [username, email, amount, status, date, time],
         (err, result) => {
             console.log(err);
-        }
+        },
     );
 });
 
@@ -228,7 +228,7 @@ app.post("/getCurrentBalance", (req, res) => {
         [username],
         (err, result) => {
             res.send(result);
-        }
+        },
     );
 });
 
@@ -238,7 +238,7 @@ app.post("/changeTransactionPassword", (req, res) => {
     console.log(password.password);
     db.query(
         "UPDATE users SET TransactionPassword = ?,TransactionPasswordIv = ? WHERE username = ?",
-        [password.password, password.iv, username]
+        [password.password, password.iv, username],
     );
 });
 

@@ -136,7 +136,7 @@ function Profile() {
                                             <input
                                                 onChange={(e) => {
                                                     setfirstname(
-                                                        e.target.value
+                                                        e.target.value,
                                                     );
                                                 }}
                                                 type="text"
@@ -248,7 +248,7 @@ function Profile() {
                                             <input
                                                 onChange={(e) => {
                                                     setpostalcode(
-                                                        e.target.value
+                                                        e.target.value,
                                                     );
                                                 }}
                                                 type="text"
@@ -274,7 +274,7 @@ function Profile() {
                                             <input
                                                 onChange={(e) => {
                                                     setbankaccountno(
-                                                        e.target.value
+                                                        e.target.value,
                                                     );
                                                 }}
                                                 type="text"
@@ -328,7 +328,7 @@ function Profile() {
                                             <input
                                                 onChange={(e) => {
                                                     setcurrentBalance(
-                                                        e.target.value
+                                                        e.target.value,
                                                     );
                                                 }}
                                                 type="number"
