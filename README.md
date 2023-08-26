@@ -29,7 +29,8 @@ In the ever-evolving landscape of technology, ensuring the security of your fina
 
 <p align="center">
   <img src="src/demo1.gif" alt="Demo2"/>
-  Demostration of Perlin Function (3D)
+  
+  <p align="center">Demostration of Perlin Function (3D)</p>
 </p>
 
 ## Features and Interfaces 🚀
